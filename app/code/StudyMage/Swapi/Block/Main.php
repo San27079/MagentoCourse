@@ -1,0 +1,6 @@
+<?php
+namespace StudyMage\Swapi\Block;
+class Main extends \Magento\Framework\View\Element\Template
+{
+    function _prepareLayout(){}
+}

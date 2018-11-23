@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="studymage_swapi_command_swapi" xsi:type="object">StudyMage\Swapi\Command\Swapi</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="StudyMage\Swapi\Helper\SwapiDataInterface" type="StudyMage\Swapi\Helper\SwapiData"/>
+    <virtualType name="StudyMage\Swapi\Helper\SwapiDataFilms" type="StudyMage\Swapi\Helper\SwapiData">
+        <arguments>
+            <argument name="type" xsi:type="string">films</argument>
+            <argument name="props" xsi:type="array">
+                <item name="0" xsi:type="string">title</item>
+                <item name="1" xsi:type="string">director</item>
+                <item name="2" xsi:type="string">episode_id</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="StudyMage\Swapi\Helper\SwapiDataPeople" type="StudyMage\Swapi\Helper\SwapiData">
+        <arguments>
+            <argument name="type" xsi:type="string">people</argument>
+            <argument name="props" xsi:type="array">
+                <item name="0" xsi:type="string">name</item>
+                <item name="1" xsi:type="string">gender</item>
+                <item name="2" xsi:type="string">height</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="StudyMage\Swapi\Helper\SwapiDataPlanets" type="StudyMage\Swapi\Helper\SwapiData">
+        <arguments>
+            <argument name="type" xsi:type="string">planets</argument>
+            <argument name="props" xsi:type="array">
+                <item name="0" xsi:type="string">name</item>
+                <item name="1" xsi:type="string">diameter</item>
+                <item name="2" xsi:type="string">gravity</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="StudyMage\Swapi\Helper\SwapiDataStarships" type="StudyMage\Swapi\Helper\SwapiData">
+        <arguments>
+            <argument name="type" xsi:type="string">starships</argument>
+            <argument name="props" xsi:type="array">
+                <item name="0" xsi:type="string">name</item>
+                <item name="1" xsi:type="string">model</item>
+                <item name="2" xsi:type="string">manufacturer</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="StudyMage\Swapi\Helper\SwapiDataVehicles" type="StudyMage\Swapi\Helper\SwapiData">
+        <arguments>
+            <argument name="type" xsi:type="string">vehicles</argument>
+            <argument name="props" xsi:type="array">
+                <item name="0" xsi:type="string">name</item>
+                <item name="1" xsi:type="string">model</item>
+                <item name="2" xsi:type="string">manufacturer</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="StudyMage\Swapi\Helper\SwapiData">
+        <plugin name="studymage_swapi_studymage_swapi_helper_swapidata" type="StudyMage\Swapi\Plugin\StudyMage\Swapi\Helper\SwapiData"/>
+    </type>
+</config>
