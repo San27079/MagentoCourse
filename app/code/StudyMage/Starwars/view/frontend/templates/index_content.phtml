@@ -1,0 +1,14 @@
+<h1>
+    Star Wars all available content
+</h1>
+<div>
+    <ul>
+        <?php foreach($block->getApiData() as $key => $data): ?>
+            <li>
+                <a href="<?= $block->getUrl('starwars/index/category', ['category' => $key]); ?>">
+                    <?= ucfirst($key); ?>
+                </a>
+            </li>
+        <?php endforeach;  ?>
+    </ul>
+</div>

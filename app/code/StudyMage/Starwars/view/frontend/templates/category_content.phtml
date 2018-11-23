@@ -1,0 +1,12 @@
+<h1>Category: <?= ucfirst($block->getCategoryName()); ?></h1>
+<div>
+    <ul>
+        <?php foreach($block->getSwapiCategoryData()->results as $key => $data): ?>
+            <li>
+                    <a href="<?= $block->getUrl('starwars/index/item', ['category' => $block->getCategoryName(), 'id' => ($block->getCategoryName() == 'films' ? $data->episode_id :$block->getItemId($data->url))]); ?>">
+                    <?= ucfirst(($block->getCategoryName() == 'films' ? $data->title : $data->name)); ?>
+                </a>
+            </li>
+        <?php endforeach;  ?>
+    </ul>
+</div>

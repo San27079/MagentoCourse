@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block template="item_content.phtml" class="StudyMage\Starwars\Block\Item"
+               name="studymage_starwars_block_item"/>
+    </referenceContainer>
+    <referenceContainer name="sidebar.additional">
+        <block template="sidebar.phtml" class="StudyMage\Starwars\Block\Sidebar" name="studymage_starwars_block_sidebar" before="-"/>
+    </referenceContainer>
+</page>

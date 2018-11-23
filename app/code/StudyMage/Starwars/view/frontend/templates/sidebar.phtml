@@ -1,0 +1,12 @@
+<div>
+    <h3>Star Wars Categories</h3>
+    <ul>
+        <?php foreach($block->getSwapiCategories() as $key => $data): ?>
+            <li>
+                <a href="<?= $block->getUrl('starwars/index/category', ['category' => $key]); ?>">
+                    <?= ucfirst($key); ?>
+                </a>
+            </li>
+        <?php endforeach;  ?>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+<h1>Item: <?= ucfirst($block->getCategoryItem() == 'films' ? $block->getSwapiItemData()->title : $block->getSwapiItemData()->name) ?></h1>
+<div
+    <?php foreach($block->getSwapiItemData() as $key => $data): ?>
+        <p> <span><strong><?= ucfirst($key) ?></strong></span> :
+            <?php if(is_array($data)): ?>
+                <?php foreach($data as $i => $cont): ?>
+                <p> <span><strong><?= ucfirst(($i+1)); ?></strong></span> : <span><?= $cont; ?></span></p>
+                <?endforeach;?>
+            <?php else: ?>
+                <span> <?= $data ?> </span>
+            <?php endif; ?>
+        </p>
+    <?php endforeach;  ?>
+</div>
