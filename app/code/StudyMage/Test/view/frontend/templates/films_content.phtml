@@ -1,0 +1,8 @@
+<<?= $block->getWrapper(); ?>>
+<h1>SWAPI: <?= ucfirst($block->getTypeContent()); ?></h1>
+<<?= $block->getListType(); ?>>
+<?php foreach ($block->getFilms()->results as $film): ?>
+    <li><?= $film->title ?></li>
+<?php endforeach; ?>
+</<?= $block->getListType(); ?>>
+</<?= $block->getWrapper(); ?>>

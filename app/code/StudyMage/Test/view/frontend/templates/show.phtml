@@ -1,0 +1,9 @@
+<<?= $block->getWrapper(); ?>>
+    <h2>SWAPI</h2>
+    <<?= $block->getListType(); ?>>
+        <p><?= $block->getTitle(); ?></p>
+        <?php foreach ($block->getRegistryFilms() as $film): ?>
+            <li><?= $film->title ?></li>
+        <?php endforeach; ?>
+    </<?= $block->getListType(); ?>>
+</<?= $block->getWrapper(); ?>>

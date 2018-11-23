@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <move element="studymage_test_block_filmscontent" destination="sidebar.additional"/>
+    <referenceContainer name="sidebar.additional">
+        <block template="show.phtml" class="StudyMage\Test\Block\Show" name="studymage_test_block_show">
+            <arguments>
+                <argument name="wrapper" xsi:type="string">div</argument>
+                <argument name="list_type" xsi:type="string">ol</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceContainer name="content">
+        <block template="films_content.phtml" class="StudyMage\Test\Block\FilmsContent" name="studymage_test_block_filmscontent">
+            <arguments>
+                <argument name="wrapper" xsi:type="string">div</argument>
+                <argument name="list_type" xsi:type="string">ol</argument>
+            </arguments>
+            <action method="addTypeContent">
+                <argument name="wrapper" xsi:type="string">films</argument>
+            </action>
+            <action method="ApiData"/>
+        </block>
+    </referenceContainer>
+</page>
