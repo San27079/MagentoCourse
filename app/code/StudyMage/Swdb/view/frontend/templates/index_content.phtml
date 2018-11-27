@@ -1,0 +1,8 @@
+<h1>List of types</h1>
+<ul>
+    <?php  foreach($block->getItems() as $item): ?>
+        <li>
+            <a href="<?= $block->getUrl('*/*/item',['category' => $item['category']]); ?>"><?= $item['name'] ?></a>
+        </li>
+    <?php endforeach; ?>
+</ul>

@@ -30,7 +30,7 @@ class Swapi extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $swapiFilms = $this->manager->create(SwapiDataFilms::class);
+       /* $swapiFilms = $this->manager->create(SwapiDataFilms::class);
         $resultsFilms = $swapiFilms->getObject(5);
         $swapiPeople = $this->manager->create(SwapiDataPeople::class);
         $resultsPeople = $swapiPeople->getObject(5);
@@ -39,7 +39,14 @@ class Swapi extends Command
 
         $output->writeln($resultsFilms);
         $output->writeln($resultsPeople);
-        $output->writeln($resultsStarships);
+        $output->writeln($resultsStarships);*/
+
+        $swapiFilms = $this->manager->create(SwapiDataFilms::class);
+        $resultsFilms = $swapiFilms->getCollection();
+        foreach($resultsFilms as $res){
+            $output->writeln($res->director);
+        }
+
 
     }
 } 

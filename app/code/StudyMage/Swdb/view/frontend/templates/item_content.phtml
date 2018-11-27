@@ -1,0 +1,10 @@
+<h1>Category <?= $block->getCategory(); ?></h1>
+<ul>
+    <?php foreach($block->getItems() as $item): ?>
+        <li>
+            <?php foreach($item->getData() as $attr): ?>
+                <span> <?= $attr; ?> </span>:
+            <?php endforeach; ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
