@@ -29,16 +29,26 @@ class SwapiData extends AbstractHelper implements SwapiDataInterface
     public function __construct(
         Context $context,
         Curl $curl,
+        $api = 'https://swapi.co/api/',
         $type = 'films',
         array $props = []
     )
     {
-        $this->address = "https://swapi.co/api/{$type}/";
+        $this->type = $type;
+        $this->setAddress($api, $type);
         $this->props = $props;
         $this->curl = $curl;
         parent::__construct($context);
     }
 
+    /**
+     * @param $api
+     * @param $type
+     */
+    public function setAddress($api, $type)
+    {
+        $this->address = "{$api}{$type}/";
+    }
     /**
      * @return mixed
      */

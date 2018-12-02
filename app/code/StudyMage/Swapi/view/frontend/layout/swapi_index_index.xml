@@ -1,3 +1,7 @@
 <?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-<referenceContainer name="content"><block template="main_content.phtml" class="StudyMage\Swapi\Block\Main" name="studymage_swapi_block_main"/></referenceContainer></page>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block template="main_content.phtml" class="StudyMage\Swapi\Block\Main" name="studymage_swapi_block_main"/>
+    </referenceContainer>
+</page>

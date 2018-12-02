@@ -1,5 +1,7 @@
 <?php
+
 namespace StudyMage\Swdb\Controller\Index;
+
 class Index extends \Magento\Framework\App\Action\Action
 {
 
