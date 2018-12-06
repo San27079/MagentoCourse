@@ -61,4 +61,5 @@
     <type name="StudyMage\Swapi\Helper\SwapiData">
         <plugin name="studymage_swapi_studymage_swapi_helper_swapidata" type="StudyMage\Swapi\Plugin\StudyMage\Swapi\Helper\SwapiData"/>
     </type>
+
 </config>

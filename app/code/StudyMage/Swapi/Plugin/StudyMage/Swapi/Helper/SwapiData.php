@@ -67,7 +67,6 @@ class SwapiData
                 );*/
             }
         }
-        return $subject;
     }
 
     /**

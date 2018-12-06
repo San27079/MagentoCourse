@@ -34,7 +34,6 @@ class SwapiData extends AbstractHelper implements SwapiDataInterface
         array $props = []
     )
     {
-        $this->type = $type;
         $this->setAddress($api, $type);
         $this->props = $props;
         $this->curl = $curl;
