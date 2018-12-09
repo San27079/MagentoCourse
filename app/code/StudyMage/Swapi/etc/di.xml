@@ -62,4 +62,18 @@
         <plugin name="studymage_swapi_studymage_swapi_helper_swapidata" type="StudyMage\Swapi\Plugin\StudyMage\Swapi\Helper\SwapiData"/>
     </type>
 
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="studymage_swapi_film_listing_data_source" xsi:type="string">StudyMage\Swapi\Model\ResourceModel\Film\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="StudyMage\Swapi\Model\ResourceModel\Film\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">swapi_film</argument>
+            <argument name="resourceModel" xsi:type="string">StudyMage\Swapi\Model\ResourceModel\Film</argument>
+        </arguments>
+    </virtualType>
 </config>

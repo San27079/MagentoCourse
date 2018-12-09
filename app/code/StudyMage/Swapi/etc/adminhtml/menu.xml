@@ -2,17 +2,24 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="StudyMage_Swapi::main_module_menu"
-             resource="StudyMage_Swapi::main_module"
+        <add id="StudyMage_Swapi::swapi_main"
+             resource="StudyMage_Swapi::swapi"
              title="Swapi Module"
              module="StudyMage_Swapi"
              sortOrder="10"/>
-        <add id="StudyMage_Swapi::swapi_film_list_menu"
-             resource="StudyMage_Swapi::swapi_film_list"
+        <add id="StudyMage_Swapi::swapi_film_create"
+             resource="StudyMage_Swapi::film_edit"
+             title="Create Film"
+             module="StudyMage_Swapi"
+             action="studymage_swapi_admin/film/new"
+             parent="StudyMage_Swapi::swapi_main"
+             sortOrder="10"/>
+        <add id="StudyMage_Swapi::swapi_film_index"
+             resource="StudyMage_Swapi::film"
              title="Films"
              module="StudyMage_Swapi"
-             action="swapi/film/index"
-             parent="StudyMage_Swapi::main_module_menu"
+             action="studymage_swapi_admin/film"
+             parent="StudyMage_Swapi::swapi_main"
              sortOrder="10"/>
     </menu>
 </config>

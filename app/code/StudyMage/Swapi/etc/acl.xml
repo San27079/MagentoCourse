@@ -3,8 +3,9 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="StudyMage_Swapi::main_module" title="Swapi Module">
-                    <resource id="StudyMage_Swapi::swapi_film_list" title="Film Listing"/>
+                <resource id="StudyMage_Swapi::swapi" title="Swapi Module">
+                    <resource id="StudyMage_Swapi::film" title="Film Listing"/>
+                    <resource id="StudyMage_Swapi::edit" title="Film Listing"/>
                 </resource>
             </resource>
         </resources>

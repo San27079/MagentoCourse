@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="admin">
-        <route id="swapiadminpage" frontName="swapiadminpage">
+        <route id="studymage_swapi_admin" frontName="studymage_swapi_admin">
             <module name="StudyMage_Swapi"/>
         </route>
     </router>
